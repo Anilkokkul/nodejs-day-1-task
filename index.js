@@ -39,7 +39,6 @@ app.get("/getFiles", (req, res) => {
       }
       console.log('Successfully retrieved files');
       res.send({
-         massage: "Successfully retrieved files",
          data: files
       })
    });
