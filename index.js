@@ -9,14 +9,15 @@ app.use(express.json());
 
 //API to create file with current timestamp content and file name
 app.post("/createfile", (req, res) => {
-   const currentDate = new Date();
-   const fileName = `${currentDate.toISOString().replace(/[:.]/g, "-")}.txt`
+   const currentDate = new Date();//for file name and file content
+   console.log(currentDate);
+   const fileName = `${currentDate.toISOString().replace(/[:.]/g, "-")}.txt` //this will give the file name of date and time
    const fileContent = `Current Timestamp: ${currentDate.getTime()}`;
 
    fs.writeFile(`Files/${fileName}`, fileContent, (err, text)=> {
       if (err) {
          console.log(err);
-         return res.status(500).send("Error while creating file");
+         return res.status(500).send("Error while creating f ile");
       }
       console.log('File created Successfully');
       res.status(201).send({
