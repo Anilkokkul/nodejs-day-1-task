@@ -29,7 +29,7 @@ app.post("/createfile", (req, res) => {
  })
 
 //API to retrive the all text files in the folder
-app.get("/getFiles", (req, res) => {
+app.get("/", (req, res) => {
 
    fs.readdir('Files', (err, files) => {
       console.log(files)
