@@ -6,6 +6,6 @@ const router = express.Router();
 
 router.post("/createfile", createFile)
  
-router.get("/", getAllFiles);
+router.get("/getfiles", getAllFiles);
 
 module.exports = router;

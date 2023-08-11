@@ -6,7 +6,7 @@
 ```
 - To retrieve the files in folder use below api
 ```http
-  http://localhost:5000/getFiles
+  http://localhost:5000/getfiles
 ```
 
 -using Nodejs file system and path modeules created the app
